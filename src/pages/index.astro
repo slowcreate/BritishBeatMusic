@@ -1,60 +1,51 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from 'astro:assets';
-import Heropic from "../assets/images/hero.jpg";
+import Hero from "../assets/images/hero.jpg";
+
+const schemamarkup = {
+ "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Hvilke bands er British Beat Musik",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The Beatles, The Animals og The Rolling Stones"
+    }
+  },{
+    "@type": "Question",
+    "name": "Hvilken tidsperiode er Britisk Beat Musik",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Britisk Beat musik er er tidsperioden mellem 1950 til omkring 1970'erne."
+    }
+  }]
+};
 ---
 <MainLayout title="British Beat Music">
-    <section class="">
-        <Image src={Heropic} alt="British Beat music titel med the beatles statuer"/>
+    <section class="bg-black">
+        <Image class="mx-auto w-[400px] md:min-w-[1000px]" src={Hero} alt="British Beat music titel med the beatles statuer"/>
     </section>
-	<article class="grid mx-auto container gap-8 pt-8 prose">
+	<article class="grid mx-auto prose">
             <section>
-            <h2 class="text-8xl uppercase font-black">1950'erne</h2>
-                <h3></h3>
-                <ul>
-                    <li>The Beatles</li>
-                    <li>The Animals</li>
-                    <li>The Rolling Stones</li>
-                </ul>
+            <h2 class="text-[#f4562b] mt-24 mb-8 text-8xl  font-black">1950'erne</h2>
+                <h3>Begyndelsen på britisk beatmusik</h3>
+                <p>I løbet af 1950'erne begyndte rock and roll at tage form i USA, og denne nye musikstil spredte sig hurtigt til Storbritannien. Her blev den modtaget med åbne arme, især blandt ungdommen, der ønskede en mere energisk og oprørsk musikstil. Den britiske skiffle-bevægelse, som havde rødder i jazz og folkemusik, blev en afgørende inspirationskilde. Bands som Lonnie Donegan’s Skiffle Group bidrog til at introducere den unge generation for simple instrumenter som guitar og bas, hvilket gjorde det nemt for nye bands at opstå. Mange af de senere berømte britiske beatbands, herunder The Beatles, startede med at spille skiffle.</p>
                 <!-- <Image src={farver} alt="to farver hængt op på en væg" /> -->
         </section>
-        
-        <hr>
-
         <section>
-            <h2 class="text-8xl uppercase font-black">1960'erne</h2>
-            <p></p>
+            <h2 class="text-[#f4562b] mt-24 mb-8 text-8xl  font-black">1960'erne</h2>
+            <p>I 1960'erne nåede britisk beatmusik sit højdepunkt. The Beatles, ofte betragtet som det største og mest indflydelsesrige band fra denne æra, revolutionerede populærmusikken. Samtidig med The Beatles’ succes, kom flere britiske bands frem, og de blev en del af den såkaldte "British Invasion", hvor britiske musikere overtog de internationale hitlister.</p>
+            <h4>Her er nogle af de mest ikoniske bands fra denne periode:</h4>
             <ul>
-                <li></li>
-                <li></li>
+                <li>The Beatles</li>
+                <li>The Animals</li>
+                <li>The Rolling Stones</li>
             </ul>
+            <p>Disse bands spillede en central rolle i beatmusikkens udvikling og udbredelse. Med deres unikke lyd og energi skabte de en bølge af populærmusik, der både påvirkede ungdomskulturen og ændrede musikhistorien. The Rolling Stones og The Animals adskilte sig ved at bringe en mere rå og blues-inspireret lyd ind i genren, hvilket gav britisk beatmusik endnu større diversitet og appel.</p>
             <!-- <Image src={motiver} alt="to motiver hængt op på en væg" /> -->
         </section>
-
-        <hr>
-
-        <section>
-            <h2></h2>
-                <p></p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <!-- <Image src={farver} alt="to farver hængt op på en væg" /> -->
-        </section>
-
-        <hr>
-
-           <section>
-            <h2></h2>
-                <p></p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <!-- <Image src={farver} alt="to farver hængt op på en væg" /> -->
-        </section>
-        
         <section>
             <div class="grid grid-cols-2 gap-4">
                 <!-- <Image src={layout1} alt="Visning af opsætning på væg, version 1" />
@@ -63,5 +54,17 @@ import Heropic from "../assets/images/hero.jpg";
                 <Image src={layout4} alt="Visning af opsætning på væg, version 4" /> -->
             </div>
         </section>
+        <hr>
     </article>
 </MainLayout>
+
+<style>
+li{
+    font-weight: 900;
+    margin: 2px;
+    color: #f4562b;
+}
+
+</style>
+
+<script type="application/ld+json" set:html={JSON.stringify(schemamarkup)}>
