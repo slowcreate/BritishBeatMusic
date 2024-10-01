@@ -2,6 +2,8 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from 'astro:assets';
 import Hero from "../assets/images/hero.jpg";
+import Stones from "../assets/images/thestones.jpg"
+import Beatles from "../assets/images/thebeatles.jpg"
 
 const schemamarkup = {
  "@context": "https://schema.org",
@@ -32,19 +34,23 @@ const schemamarkup = {
             <h2 class="text-[#f4562b] mt-24 mb-8 text-8xl  font-black">1950'erne</h2>
                 <h3>Begyndelsen på britisk beatmusik</h3>
                 <p>I løbet af 1950'erne begyndte rock and roll at tage form i USA, og denne nye musikstil spredte sig hurtigt til Storbritannien. Her blev den modtaget med åbne arme, især blandt ungdommen, der ønskede en mere energisk og oprørsk musikstil. Den britiske skiffle-bevægelse, som havde rødder i jazz og folkemusik, blev en afgørende inspirationskilde. Bands som Lonnie Donegan’s Skiffle Group bidrog til at introducere den unge generation for simple instrumenter som guitar og bas, hvilket gjorde det nemt for nye bands at opstå. Mange af de senere berømte britiske beatbands, herunder The Beatles, startede med at spille skiffle.</p>
-                <!-- <Image src={farver} alt="to farver hængt op på en væg" /> -->
+                <Image src={Beatles} alt="The Beatles grøn LP" />
         </section>
         <section>
             <h2 class="text-[#f4562b] mt-24 mb-8 text-8xl  font-black">1960'erne</h2>
-            <p>I 1960'erne nåede britisk beatmusik sit højdepunkt. The Beatles, ofte betragtet som det største og mest indflydelsesrige band fra denne æra, revolutionerede populærmusikken. Samtidig med The Beatles’ succes, kom flere britiske bands frem, og de blev en del af den såkaldte "British Invasion", hvor britiske musikere overtog de internationale hitlister.</p>
-            <h4>Her er nogle af de mest ikoniske bands fra denne periode:</h4>
-            <ul>
-                <li>The Beatles</li>
-                <li>The Animals</li>
-                <li>The Rolling Stones</li>
-            </ul>
+            <div class="flex flex-row">
+                <div>
+                    <p>I 1960'erne nåede britisk beatmusik sit højdepunkt. The Beatles, ofte betragtet som det største og mest indflydelsesrige band fra denne æra, revolutionerede populærmusikken. Samtidig med The Beatles’ succes, kom flere britiske bands frem, og de blev en del af den såkaldte "British Invasion", hvor britiske musikere overtog de internationale hitlister.</p>
+                    <h4>Her er nogle af de mest ikoniske bands fra denne periode:</h4>
+                    <ul>
+                        <li>The Beatles</li>
+                        <li>The Animals</li>
+                        <li>The Rolling Stones</li>
+                    </ul>
+                </div>
+                <Image class="w-[350px]" src={Stones} alt="The rolling stones plakatvæg"></Image>
+            </div>
             <p>Disse bands spillede en central rolle i beatmusikkens udvikling og udbredelse. Med deres unikke lyd og energi skabte de en bølge af populærmusik, der både påvirkede ungdomskulturen og ændrede musikhistorien. The Rolling Stones og The Animals adskilte sig ved at bringe en mere rå og blues-inspireret lyd ind i genren, hvilket gav britisk beatmusik endnu større diversitet og appel.</p>
-            <!-- <Image src={motiver} alt="to motiver hængt op på en væg" /> -->
         </section>
         <section>
             <div class="grid grid-cols-2 gap-4">
